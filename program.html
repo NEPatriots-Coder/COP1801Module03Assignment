@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Tasks</h1>
+    <div id="output"></div>
+
+    <script>
+        let output = document.getElementById('output');
+
+        // Task 1: For loop counting from 0 to 10
+        output.innerHTML += "<h2>Task 1: Odd/Even Counter</h2>";
+        for (let i = 0; i <= 10; i++) {
+            let oddEven = i % 2 === 0 ? "even" : "odd";
+            output.innerHTML += `Count ${i} is ${oddEven}<br>`;
+        }
+
+        // Task 2: Do While loop
+        output.innerHTML += "<h2>Task 2: Do While Loop</h2>";
+        let myNum = parseInt(prompt("Enter a number between 5 and 20:"));
+        if (myNum >= 5 && myNum <= 20) {
+            let counter = 1;
+            do {
+                output.innerHTML += `Counter: ${counter}<br>`;
+                counter++;
+            } while (counter <= myNum);
+        } else {
+            output.innerHTML += "Invalid input. Please refresh and try again.";
+        }
+
+        // Task 3: Array operations
+        output.innerHTML += "<h2>Task 3: Array Operations</h2>";
+        let subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+
+        // Display array using forEach()
+        output.innerHTML += "<h3>Array values using forEach():</h3>";
+        subjects.forEach(subject => {
+            output.innerHTML += `${subject}<br>`;
+        });
+
+        // Display array values separated by commas
+        output.innerHTML += "<h3>Array values separated by commas:</h3>";
+        output.innerHTML += subjects.join(", ");
+    </script>
+</body>
+
+</html>
+
+<!-- HTML validated by validator.w3.org -->
